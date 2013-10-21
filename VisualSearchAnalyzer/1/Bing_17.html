@@ -1,0 +1,527 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>模特肖臻杰- 广告海 影视广告平台</title>
+<!--<link href="/Style/kissy-reset-min.css" rel="stylesheet" type="text/css" />-->
+<link href="/Style/Style.css" rel="stylesheet" type="text/css" />
+<link href="/Script/CustomScrollbar/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/Script/jQuery.js"></script>
+<script type="text/javascript" src="/Script/jquery-ui.min.js"></script>
+<script type="text/javascript" src="/Script/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="/Script/jquery.mousewheel.min.js"></script>
+<script type="text/javascript" src="/Script/CustomScrollbar/jquery.mCustomScrollbar.js"></script>
+<script type="text/javascript" src="/Script/jquery.lazyload.js"></script>
+<script type="text/javascript" src="/Script/jquery.form.js"></script>
+<script type="text/javascript" src="/Script/Script.js"></script>
+<script type="text/javascript" src="/Script/AC_RunActiveContent.js"></script>
+<script>
+jQuery(function(){
+	$('#keyword').smartFocus('请输入关键字');
+    //$("img").not('.nolazyload').lazyload({placeholder : "/images/grey.gif"});
+})
+</script>
+<script>
+/* function to fix the -10000 pixel limit of jquery.animate */
+$.fx.prototype.cur = function(){
+    if ( this.elem[this.prop] != null && (!this.elem.style || this.elem.style[this.prop] == null) ) {
+      return this.elem[ this.prop ];
+    }
+    var r = parseFloat( jQuery.css( this.elem, this.prop ) );
+    return typeof r == 'undefined' ? 0 : r;
+}
+
+/* function to load new content dynamically */
+function LoadNewContent(id,file){
+	$("#"+id+" .customScrollBox .content").load(file,function(){
+		mCustomScrollbars();
+	});
+}
+</script>
+
+<link href="/Script/fancybox/jquery.fancybox-1.3.4.css" rel="stylesheet" type="text/css" />
+<script src="/Script/fancybox/jquery.fancybox-1.3.4.js"></script>
+</head>
+<body>
+<link href="/Style/navi.css" rel="stylesheet" type="text/css" />
+<table width="960" height="122" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+  <tr>
+    <td width="395" rowspan="2" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td width="395" height="122"><a href="/"	><img src="/Images/logo.gif" width="395" height="122" /></a></td>
+        </tr>
+      </table></td>
+    <td width="565" height="46" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td width="565" height="46"><div align="right" class="p14-h">中文 | ENGLISH </div></td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr>
+    <td height="76" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td class="nav"><a class="nav_index" href="/" onclick="return changeNavi('index')"><span>首页</span></a><a class="nav_person" href="/Person/" onclick="return changeNavi('person')"><span>人物</span></a><a class="nav_company" href="/Company/" onclick="return changeNavi('company')"><span>公司</span></a><a class="nav_model" href="/Model/"><span>模特</span></a><a class="nav_artist" href="/Actor/"><span>演员</span></a><a class="nav_news" href="/News/"><span>新闻</span></a></td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<script type="text/javascript">
+function changeNavi(nav){
+	return true;
+	o = jQuery('#index_person_company');
+	if(o.size()>0){
+		switch(nav){
+			case 'index':
+				jQuery('#index_person_company').addClass('index_person_company_index');
+			case 'person':
+	
+			case 'company':		
+		}
+		//alert(o.length + '           ' + nav)
+		return false;
+	}else{
+		return true;
+	}
+	
+}
+</script>
+<table width="960" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+  <tr>
+    <td height="3"></td>
+  </tr>
+</table>
+<table width="960" height="41" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+  <tr>
+    <td width="123" height="41" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td width="123" height="41"><img src="/Images/top_adl.gif" width="123" height="41" /></td>
+        </tr>
+      </table></td>
+    <td width="583" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td width="583" height="41" bgcolor="#ABABAB"><table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+              <tr>
+                <td><div align="right"><span class="p14-b"><a href="list.php?cate=1">国内男模</a>&nbsp; |&nbsp; <a href="list.php?cate=2">国内女模</a>&nbsp; |&nbsp; <a href="list.php?cate=3">国外男模</a>&nbsp; |&nbsp; <a href="list.php?cate=4">国外女模</a>&nbsp; |&nbsp; <a href="list.php?new=1">明星艺人</a></span></div></td>
+              </tr>
+            </table></td>
+        </tr>
+      </table></td>
+    <td width="254" valign="top"><link rel="stylesheet" href="/Script/SearchBox/SearchBox.css" type="text/css" media="screen"/>
+<div style="position:relative;margin:0px;">
+<form onsubmit="return checkKeyword()" class="sb_wrapper" name="searchForm" id="searchForm" action="/Search/" method="get">
+  <table width="254" border="0" cellpadding="0" cellspacing="0">
+    <tr>
+      <td width="218" class="ssk" valign="middle"><span class="sb_down"></span>
+          <input id="keyword" name="keyword" class="sb_input" type="text" />
+        </td>
+      <td width="36"><input class="sb_search" type="image" src="/Images/icon_s.gif" width="48" height="41" /></td>
+    </tr>
+  </table>
+  <ul class="sb_dropdown" style="display:none;">
+    <li class="sb_filter">选择搜索内容</li>
+    <li>
+      <input name="searchby" id="news" value="news" type="radio"/>
+      <label for="news">新闻</label>
+    </li>
+    <li>
+      <input id="company" name="searchby" value="company" type="radio"/>
+      <label for="company">公司</label>
+    </li>
+    <li>
+      <input id="person" name="searchby" value="person" type="radio"/>
+      <label for="person">人物</label>
+    </li>
+    <li>
+      <input name="searchby" type="radio" id="model" value="model"/>
+      <label for="model">模特</label>
+    </li>
+    <li>
+      <input name="searchby" type="radio" id="adv" value="adv" checked="checked"/>
+      <label for="adv">广告</label>
+    </li>
+    <li>
+      <input name="searchby" type="radio" id="actor" value="actor"/>
+      <label for="actor">演员管理</label>
+    </li>
+  </ul>
+</form>
+</div>
+<script type="text/javascript">
+	function checkKeyword(){
+		if($('#keyword').val() == '请输入关键字' || $('#keyword').val() == ''){
+			alert('请输入关键字');
+			return false;
+		}
+	}
+	$(function() {
+		var $ui= $('#searchForm');
+		$ui.find('.sb_input').bind('focus click',function(){
+			$ui.find('.sb_down')
+			   .addClass('sb_up')
+			   .removeClass('sb_down')
+			   .andSelf()
+			   .find('.sb_dropdown')
+			   .show();
+		});
+		$ui.bind('mouseleave',function(){
+			$ui.find('.sb_up')
+			   .addClass('sb_down')
+			   .removeClass('sb_up')
+			   .andSelf()
+			   .find('.sb_dropdown')
+			   .hide();
+		});
+	});
+</script>
+</td>
+  </tr>
+</table>
+<table width="960" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+  <tr>
+    <td height="3"></td>
+  </tr>
+</table>
+<table width="960" height="794" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+  <tr>
+    <td width="706" height="794" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td width="706" height="55" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0" background="/Images/list_bg.GIF">
+              <tr>
+                <td width="156" height="55" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td width="156" height="55"><img src="/Images/icon_mt.GIF" width="156" height="55" /></td>
+                    </tr>
+                  </table></td>
+                <td width="550" valign="bottom"><table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td width="7%">&nbsp;</td>
+                      <td width="7%">&nbsp;</td>
+                      <td width="38%">&nbsp;</td>
+                      <td width="16%">&nbsp;</td>
+                      <td width="16%">&nbsp;</td>
+                      <td width="16%">&nbsp;</td>
+                    </tr>
+                  </table></td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr>
+          <td height="280" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+              <tr>
+                <td width="258" height="280" bgcolor="#868281">                  <table width="191" height="229" border="0" align="center" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td background="/Images/list3_ddbg.GIF"><div align="center"><img src="http://web.adsea.cn/Upload/Model/Tmp/201104131657302806256.jpg" width="177" height="215" /></div></td>
+                    </tr>
+                  </table>
+                  </td>
+                <td width="448" valign="top" bgcolor="#868281"><br />
+                  <table width="96%" height="36" border="0" align="center" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td width="53%" class="p14-hc"><div align="left">肖臻杰</div></td>
+                      <td width="27%" class="border-1"></td>
+                      <td width="20%" class="border-1"><!--<div align="center"><img src="/Images/icon_gl.GIF" width="62" height="24" /></div>--></td>
+                    </tr>
+                  </table>
+                  <br />
+                  <table width="96%" height="36" border="0" align="center" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td valign="top"><div class="p14-h">
+                          <div id="detail_container">
+                            <div class="customScrollBox">
+                              <div class="container">
+                                <div class="content">
+                                  <div> <p class="EC_MsoNormal"><font size="3"><span style="font-family: 宋体">身高：183CM</span></font></p>
+<p class="EC_MsoNormal"><font size="3"><span style="font-family: 宋体">体重：70KG</span></font></p>
+<p class="EC_MsoNormal"><font size="3"><span style="font-family: 宋体">学历</span><span lang="EN-US">:</span><span style="font-family: 宋体">本科</span><span style="font-family: 宋体">表演</span><span lang="EN-US"><span>&nbsp;&nbsp;&nbsp; </span></span></font></p>
+<p class="EC_MsoNormal"><font size="3"><span lang="EN-US">语言:<span style="color: black"> </span></span><span style="font-family: 宋体">中文</span><span lang="EN-US">,</span><span style="font-family: 宋体">英语</span></font></p>
+<p class="EC_MsoNormal"><font size="3"><span style="font-family: 宋体">特长</span><span lang="EN-US">:<span style="color: black"> </span></span><span style="font-family: 宋体">钢琴</span><span lang="EN-US">,</span><span style="font-family: 宋体">表演</span></font></p>
+<p class="EC_MsoNormal"><font size="3"><span lang="EN-US"><font face="宋体">获奖：</font>07</span><span style="font-family: 宋体">届美特斯邦威</span> <span style="font-family: 宋体">好男儿上海十佳</span></font></p>
+<p class="EC_MsoNormal"><font size="3"><span style="font-family: 宋体">电视广告</span><span lang="EN-US">: </span><span style="font-family: 宋体">妙脆角</span><span lang="EN-US">,</span><span style="font-family: 宋体">康师傅绿茶</span><span lang="EN-US">,</span><span style="font-family: 宋体">康师傅红烧牛肉面</span><span lang="EN-US"><span>&nbsp;</span>,</span></font></p>
+<p class="EC_MsoNormal"><font size="3"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-family: 宋体">康师傅干拌面</span><span lang="EN-US">, SHENK</span><span style="font-family: 宋体">运动服平面</span><span lang="EN-US">,</span><span style="font-family: 宋体">日本制服平面</span></font></p>
+<p class="EC_MsoNormal"><font size="3"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-family: 宋体">福克斯两厢汽车</span><span style="font-family: 宋体">，</span></font><font size="3"><span style="font-family: 宋体">夏新手机</span><span style="font-family: 宋体">，KFC，桂冠贡丸</span></font></p>
+<p class="EC_MsoNormal"><font size="3"><span style="font-family: 宋体">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 班博休闲服平面</span><span lang="EN-US">, </span><span style="font-family: 宋体">康师傅干伴面&hellip;&hellip;</span></font></p>
+<p class="EC_MsoNormal"><font size="3"><span style="font-family: 宋体">平面广告</span><span lang="EN-US">:LEVIS</span><span style="font-family: 宋体">服装平面</span><span lang="EN-US"> ,</span><span style="font-family: 宋体">伊利酸奶</span><span lang="EN-US">,</span><span style="font-family: 宋体">丰田汽车</span><span lang="EN-US">,</span></font><font size="3"><span style="font-family: 宋体">巴黎婚纱，</span></font></p>
+<p class="EC_MsoNormal"><font size="3"><span style="font-family: 宋体">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 百事七喜</span><span style="font-family: 宋体">，</span><span lang="EN-US">YAMAHA</span><span style="font-family: 宋体">平面，康师傅苹果汁</span><span style="font-family: 宋体">，</span></font></p>
+<p class="EC_MsoNormal"><font size="3"><span style="font-family: 宋体">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 信印婚纱代言，统一绿茶</span><span lang="EN-US">,</span><span style="font-family: 宋体">康师傅红茶</span><span lang="EN-US">.</span></font></p> </div>
+                                </div>
+                              </div>
+                              <div class="dragger_container">
+                                <div class="dragger"></div>
+                              </div>
+                            </div>
+                            <a href="#" class="scrollUpBtn"></a> <a href="#" class="scrollDownBtn"></a> </div>
+                          
+                          <!-- content to show if javascript is disabled -->
+                          
+                          <noscript>
+                          <style type="text/css">
+							#detail_container .customScrollBox{overflow:auto;}
+							#detail_container .dragger_container{display:none;}
+						</style>
+                          </noscript>
+                          <script>
+						$(window).load(function() {
+							mCustomScrollbars();
+						});
+
+						function mCustomScrollbars(){
+							/* 
+							malihu custom scrollbar function parameters: 
+							1) scroll type (values: "vertical" or "horizontal")
+							2) scroll easing amount (0 for no easing) 
+							3) scroll easing type 
+							4) extra bottom scrolling space for vertical scroll type only (minimum value: 1)
+							5) scrollbar height/width adjustment (values: "auto" or "fixed")
+							6) mouse-wheel support (values: "yes" or "no")
+							7) scrolling via buttons support (values: "yes" or "no")
+							8) buttons scrolling speed (values: 1-20, 1 being the slowest)
+							*/
+							$("#detail_container").mCustomScrollbar("vertical",0,"easeOutCirc",1.05,"auto","yes","yes",15); 
+						}
+						</script></div></td>
+                    </tr>
+                  </table></td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr>
+          <td height="46" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+              <tr>
+                <td width="706" height="46" valign="bottom" background="/Images/list3_bg.GIF"><table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td width="14%"><a id="modeladv_link" href="#"><img src="/images/icon_dspzp.GIF" width="83" height="36" /></a></td>
+                      <td width="22%"><a id="modelimage_link" href="modelimage.php?id=535" class=""><img src="/images/icon_dzpzl.PNG" width="83" height="36" /></a></td>
+                      <td width="16%">&nbsp;</td>
+                      <td width="16%">&nbsp;</td>
+                      <td width="16%">&nbsp;</td>
+                      <td width="16%">&nbsp;</td>
+                    </tr>
+                  </table>
+<script type="text/javascript">
+jQuery('#modelimage_link').fancybox({
+		'width'				: 900,
+		'height'			: 700,
+		'autoScale'			: false,
+		'transitionIn'		: 'none',
+		'transitionOut'		: 'none',
+		'type'				: 'iframe',
+		//'padding'			: 10,
+		'centerOnScroll'	: true,
+		'margin'			: 20
+	})
+</script>
+
+                  </td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr>
+          <td height="375" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+              <tr>
+                <td width="706" height="375" valign="top" bgcolor="#868281"><br /><br /> 
+					&nbsp;<br /><br /><div class="pagination"><span class="info">共0条记录</span><a href="#" onclick="return false">&lt;&lt;</a><a href="#" onclick="return false">&lt;</a><a href="#" onclick="return false">&gt;</a><a href="#" onclick="return false">&gt;&gt;</a></div></td>
+              </tr>
+            </table>
+</td>
+        </tr>
+      </table></td>
+    <td width="254" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="254" height="55" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td width="254" height="55"><img src="/Images/login.gif" width="254" height="55" /></td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr>
+    <td height="280" valign="top" id="login_td"><div id="login_div"><script type="text/javascript"> 
+// wait for the DOM to be loaded 
+$(document).ready(function() { 
+	// bind 'myForm' and provide a simple callback function 
+	var options = { 
+		//target:        '#login_div',   // target element(s) to be updated with server response 
+		beforeSubmit:  showRequest,  // pre-submit callback 
+		success:       showResponse,  // post-submit callback 
+ 
+		// other available options: 
+		//url:       url         // override for form's 'action' attribute 
+		//type:      type        // 'get' or 'post', override for form's 'method' attribute 
+		dataType:  'json'        // 'xml', 'script', or 'json' (expected server response type) 
+		//clearForm: true        // clear all form fields after successful submit 
+		//resetForm: true        // reset the form after successful submit 
+ 
+		// $.ajax options can be used here too, for example: 
+		//timeout:   3000 
+	}; 
+ 
+	// bind to the form's submit event 
+	$('#lsform').submit(function() { 
+		// inside event callbacks 'this' is the DOM element so we first 
+		// wrap it in a jQuery object and then invoke ajaxSubmit 
+		$(this).ajaxSubmit(options); 
+ 
+		// !!! Important !!! 
+		// always return false to prevent standard browser submit and page navigation 
+		return false; 
+	}); 
+}); 
+function showRequest(){
+	if($('#ls_username').val() == '' || $('#ls_username').val() == null){
+		alert('请输入用户名');
+		return false;
+	}
+	if($('#ls_password').val() == '' || $('#ls_password').val() == null){
+		alert('请输入密码');
+		return false;
+	}
+	return true;
+}
+function showResponse(responseText, statusText, xhr, $form)  {
+	//alert(responseText);
+	alert(responseText.message);
+	if(responseText.status >0){
+		$('#login_uc').html(responseText.html);
+		//document.write(responseText.html);
+		//setTimeout("location.href='login.php'", 1000);
+		$('#login_div').load('login.php');
+	}
+	    //alert('status: ' + statusText + '\n\nresponseText: \n' + responseText +  '\n\nThe output div should have already been updated with the responseText.'); 
+}
+</script>
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="254" height="280" background="/Images/login_bg.gif" bgcolor="#343233">
+      <form method="post" autocomplete="off" id="lsform" action="login.php?action=login">
+        <table width="96%" border="0" align="center" cellpadding="0" cellspacing="2">
+          <tr>
+            <td width="30%" class="p14-b">
+              <div align="right">用户名：</div>
+            </td>
+            <td width="70%">
+              <input type="text" name="username" id="ls_username" autocomplete="off" class="login" tabindex="901" />
+            </td>
+          </tr>
+        </table>
+        <table width="96%" border="0" align="center" cellpadding="0" cellspacing="2">
+          <tr>
+            <td width="30%" class="p14-b">
+              <div align="right">密　码：</div>
+            </td>
+            <td width="70%">
+              <input type="password" name="password" id="ls_password" class="login" autocomplete="off" tabindex="902" onfocus="void('lsShowmore()')" />
+            </td>
+          </tr>
+        </table>
+        <table width="96%" height="33" border="0" align="center" cellpadding="0" cellspacing="2">
+          <tr>
+            <td width="30%" class="p14-b">&nbsp;</td>
+            <td width="9%">
+              <input type="checkbox" name="checkbox" value="checkbox" />
+            </td>
+            <td width="28%" class="p12-b">记住用户名</td>
+            <td width="9%" class="p12-b">
+              <input type="checkbox" name="checkbox2" value="checkbox" />
+            </td>
+            <td width="24%" class="p12-b">记住密码</td>
+          </tr>
+        </table>
+        <table width="96%" height="33" border="0" align="center" cellpadding="0" cellspacing="2">
+          <tr>
+            <td width="30%" class="p14-b">&nbsp;</td>
+            <td width="9%">&nbsp;</td>
+            <td class="p12-b">
+              <div align="left">忘记密码</div>
+            </td>
+          </tr>
+        </table>
+        <br />
+        <table width="96%" border="0" align="center" cellpadding="0" cellspacing="2">
+          <tr>
+            <td width="51%" class="p14-b">
+              <div align="right">
+                <input type="image" src="/Images/icon_login.gif" width="109" height="47" />
+              </div>
+            </td>
+            <td width="49%">
+              <input type="image" onclick="top.location.href='/Register.php';return false;" src="/Images/icon_new.GIF" width="110" height="47" />
+            </td>
+          </tr>
+        </table>
+      </form>
+    </td>
+  </tr>
+</table>
+</div><div id="login_uc"></div></td>
+  </tr>
+  <tr>
+    <td height="46" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td width="254" height="46"><img src="/Images/index_zx.gif" width="254" height="46" /></td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr>
+    <td height="184" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td width="254" height="184" bgcolor="#3D3B3C"><table width="96%" height="30" border="0" align="center" cellpadding="0" cellspacing="2"><tr>
+<td width="11%" class="p14-b"><div align="center"><img src="/Images/icon_01.gif" width="9" height="9" /></div></td>
+<td width="89%" class="p12-b"><a href="/News/Detail.php?id=191" target="_blank">广告海演员合辑</a></td>
+</tr></table><table width="96%" height="30" border="0" align="center" cellpadding="0" cellspacing="2"><tr>
+<td width="11%" class="p14-b"><div align="center"><img src="/Images/icon_01.gif" width="9" height="9" /></div></td>
+<td width="89%" class="p12-b"><a href="/News/Detail.php?id=190" target="_blank">上海广告演员管理联盟</a></td>
+</tr></table><table width="96%" height="30" border="0" align="center" cellpadding="0" cellspacing="2"><tr>
+<td width="11%" class="p14-b"><div align="center"><img src="/Images/icon_01.gif" width="9" height="9" /></div></td>
+<td width="89%" class="p12-b"><a href="/News/Detail.php?id=137" target="_blank">影视广告演员模特招募</a></td>
+</tr></table><table width="96%" height="30" border="0" align="center" cellpadding="0" cellspacing="2"><tr>
+<td width="11%" class="p14-b"><div align="center"><img src="/Images/icon_01.gif" width="9" height="9" /></div></td>
+<td width="89%" class="p12-b"><a href="/News/Detail.php?id=158" target="_blank">广告海 阎和平</a></td>
+</tr></table><table width="96%" height="30" border="0" align="center" cellpadding="0" cellspacing="2"><tr>
+<td width="11%" class="p14-b"><div align="center"><img src="/Images/icon_01.gif" width="9" height="9" /></div></td>
+<td width="89%" class="p12-b"><a href="/News/Detail.php?id=161" target="_blank">演艺经纪的现状与忧思</a></td>
+</tr></table></td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr>
+    <td height="46" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td width="254" height="46"><img src="/Images/index_rw.gif" width="254" height="46" /></td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr>
+    <td height="184" valign="middle"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr><td height="92"><a href="/Annuncio/Detail.php?id=51"><img src="http://web.adsea.cn/Upload/Annuncio/Tmp/201109300956342698178.jpg" width=254 height="90"></a></td></tr>
+  <tr><td height="92"><a href="/Annuncio/Detail.php?id=68"><img src="http://web.adsea.cn/Upload/Annuncio/Tmp/201109301043081862531.jpg" width=254 height="90"></a></td></tr>
+</table>
+</td>
+  </tr>
+</table>
+</td>
+  </tr>
+</table>
+<table width="960" height="76" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#FFFFFF">
+  <tr>
+    <td bgcolor="#353334" class="p14-b"><div align="center"><a href="/About.php">关于我们</a></div></td>
+    <td bgcolor="#353334" class="p14-b"><div align="center"><a href="#">合作网站</a></a></div></td>
+    <td bgcolor="#353334" class="p14-b"><div align="center"><a href="#">法律申明</a></div></td>
+    <td bgcolor="#353334" class="p14-b"><div align="center"><a href="#">隐私条款</a></div></td>
+    <td bgcolor="#353334" class="p14-b"><div align="center"><a href="/Contact.php">联系我们</a></div></td>
+    <td bgcolor="#353334" class="p14-b"><div align="center"><a href="/Customer.php">联系客服</a></div></td>
+    <td bgcolor="#353334" class="p14-b"><div align="center"><a href="http://www.miibeian.gov.cn" target="_blank">沪ICP备05062131号</a></div></td>
+  </tr>
+</table>
+<table width="960" height="14" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+  <tr>
+    <td bgcolor="#353334">&nbsp;</td>
+  </tr>
+</table>
+<!-- Baidu Button BEGIN -->
+<script type="text/javascript" id="bdshare_js" data="type=slide&amp;img=5" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+	document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?t=" + new Date().getHours();
+</script>
+<!-- Baidu Button END --></body>
+</html>

@@ -1,0 +1,750 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>肖臻杰_新浪视频</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
+<meta http-equiv="expires" content="Wed, 26 Feb 1997 08:21:57 GMT">
+<link type="text/css" rel="stylesheet" href="http://sjs0.sinajs.cn/video/css/common/common_1.css?v=1.0.0.0" />
+<link type="text/css" rel="stylesheet" href="http://sjs0.sinajs.cn/video/search/css/css.css?v=1.0.0.0" />
+<script type="text/javascript">
+var $SCOPE  = {
+	SET_DOMAIN:		'sina.com.cn',	// 转域设置
+	PRODUCT_NAME : 	"search",		// 产品名称
+	PAGE_ID : 		"SList",		// 页面ID 
+	JS_VER: 		"1.0.0.0",				// js版本号
+	CSS_VER: 		"1.0.0.0"				// css版本号
+};
+
+
+function setUser(json,flag){
+if(!flag&&TOPLBW.PlayList&&!TOPLBW.PlayList.login&&TOPLBW.PlayList.exportData){
+	try{TOPLBW.PlayList.exportData()}catch(error){}
+	}
+
+}
+var soft = soft || {};
+soft.tools = {
+	 addClass:function(o,classname){//add style
+          o=$E(o)||o;
+          var reg = new RegExp("(^|\\s+)"+ classname +"(\\s+|$)");
+		  reg.lastIndex = 0;
+          if(!reg.test(o.className))
+          	 o.className=o.className+" "+classname;
+          return this;
+        },
+	removeClass:function(o,classname){ // del style
+          o=$E(o)||o;
+          o.className=o.className.replace(new RegExp("(^|\\s+)"
+                + classname +"(\\s+|$)"), ' ');
+          return this;
+	}
+	}
+function addToPlayList(sid,uid,vid,categoryId,o){
+	if(!TOPLBW) return
+    var reg = /cut/g;
+    reg.lastIndex = 0;
+	var op = {
+			vid:vid,
+			sid:sid,
+			uid:uid,
+			categoryId:categoryId,
+			suC:function(){}
+			}
+    if(reg.test(o.className)){
+        TOPLBW.PlayList.del.call(o,{
+								 vid:vid,
+									sid:sid,
+									uid:uid,
+									categoryId:categoryId,
+									suC:function(json){
+										//soft.tools.removeClass(this,'cut');
+										try{soft.tools.removeClass(document.getElementById("add2_"+json.sid+'_'+json.categoryId),'cut');}catch(e){}
+										try{soft.tools.removeClass(document.getElementById("add_"+json.sid+'_'+json.categoryId),'cut');}catch(e){}
+										try{
+											document.getElementById("add_"+json.sid+'_'+json.categoryId).title="添加到点播单";
+											document.getElementById("add2_"+json.sid+'_'+json.categoryId).title="添加到点播单";
+											}catch(e){}
+										//soft.tools.removeClass(document.getElementById("add_"+sid+'_'+categoryId),'cut');
+										}
+								 })
+
+    }else{
+        TOPLBW.PlayList.add.call(o,{
+								 vid:vid,
+									sid:sid,
+									uid:uid,
+									categoryId:categoryId,
+									suC:function(json){
+										//soft.tools.addClass(this,'cut');
+										try{soft.tools.addClass(document.getElementById("add2_"+json.sid+'_'+json.categoryId),'cut');}catch(e){}
+										try{soft.tools.addClass(document.getElementById("add_"+json.sid+'_'+json.categoryId),'cut');}catch(e){}
+										try{
+											document.getElementById("add_"+json.sid+'_'+json.categoryId).title="从点播单移除";
+											document.getElementById("add2_"+json.sid+'_'+json.categoryId).title="从点播单移除";
+											}catch(e){}
+										//soft.tools.removeClass(document.getElementById("add_"+sid+'_'+categoryId),'cut');
+										}
+								 })
+        return false;
+    }
+    return false;
+}
+</script>
+</head>
+<body>
+<!-- 头部 start-->
+<script src="http://sjs0.sinajs.cn/video/js/global.v2.js"></script>
+<script src="http://search.sina.com.cn/js/jquery-1.4.1.min.js"></script>
+<style>
+.icon_arr{padding-right: 10px;background: url(http://www.sinaimg.cn/video/deco/2010/1221/search.png) right center no-repeat;} 
+</style>
+<!-- 头部 start-->
+<div style="position:relative;" id="top_column">
+    <div class="top clearfix" style="margin-top:5px;">
+		<div class="l">
+		 <a rel="http://search.sina.com.cn/?q=%D0%A4%D5%E9%BD%DC&c=news" href="http://search.sina.com.cn/?q=%D0%A4%D5%E9%BD%DC&c=news" id="tab02">新闻</a>
+         <a rel="http://search.sina.com.cn/?q=%D0%A4%D5%E9%BD%DC&c=zt" href="http://search.sina.com.cn/?q=%D0%A4%D5%E9%BD%DC&c=zt&range=title" id="tab02">专题</a>
+		 <a rel="http://search.sina.com.cn/?q=%D0%A4%D5%E9%BD%DC&c=img" href="http://search.sina.com.cn/?q=%D0%A4%D5%E9%BD%DC&c=img" id="tab07">图片</a>
+         <a rel="http://uni.sina.com.cn/c.php?k=%D0%A4%D5%E9%BD%DC&t=blog&ts=bpost&stype=all" href="http://uni.sina.com.cn/c.php?k=%D0%A4%D5%E9%BD%DC&t=blog&ts=bpost&stype=all" id="tab03" >博客</a>
+		 <a rel="http://weibo.com/k/%D0%A4%D5%E9%BD%DC" href="http://weibo.com/k/肖臻杰" target="_blank" id="tab04">微博</a>
+		 <a rel="http://search.video.sina.com.cn/search.php?s=sup&k=%D0%A4%D5%E9%BD%DC&type=all" href="http://video.sina.com.cn/search/index.php?s=sup&k=%D0%A4%D5%E9%BD%DC&type=all" class="selected" id="tab05">视频</a>
+
+		 <a rel="http://music.sina.com.cn/yueku/search/s.php?t=all&key=%D0%A4%D5%E9%BD%DC" href="http://music.sina.com.cn/yueku/search/s.php?t=all&key=%D0%A4%D5%E9%BD%DC" target="_blank" id="tab06">音乐</a>
+		 <a rel="http://search.sina.com.cn/?q=%D0%A4%D5%E9%BD%DC&c=product" href="http://search.sina.com.cn/?q=%D0%A4%D5%E9%BD%DC&c=product" id="tab08">产品库</a>
+		 <a href="javascript:void(0)" id="topamore" class="icon_arr">更多</a>
+		</div>
+		<div class="r">
+			<div id="rightLs"><a href="javascript:void(0)" id="videoamore">新浪视频</a><a href="http://www.sina.com.cn" target="_blank">新浪首页</a><a href="javascript:void(0)" onclick="addFavorite()">收藏本页</a></div>
+			<div id="topTrayBox" class="topTrayNav2" style="position:relative;"></div>
+		</div>
+	</div>
+	
+	<div class="list-more" id="topcmore" style="left:292px;top:26px;display:none;"><!-- left:485px -->
+		 <div class="more-arr"></div>
+		 <div class="more-link">				
+<a rel="http://biz.finance.sina.com.cn/suggest/lookup_n.php?suggest_radio=lookupn&country=&q=%D0%A4%D5%E9%BD%DC&t=keyword&c=all&k=%D0%A4%D5%E9%BD%DC&name=%D0%A4%D5%E9%BD%DC" href="http://biz.finance.sina.com.cn/suggest/lookup_n.php?suggest_radio=lookupn&country=&q=%D0%A4%D5%E9%BD%DC&t=keyword&c=all&k=%D0%A4%D5%E9%BD%DC&name=%D0%A4%D5%E9%BD%DC" target="_blank">股票</a>
+<a href="http://weather.sina.com.cn/" target="_blank">天气</a>
+<a href="http://map.sina.com.cn/" target="_blank">地图</a>
+<a rel="http://yingxun.ent.sina.com.cn/search_key.php?keyword=%D0%A4%D5%E9%BD%DC" href="http://yingxun.ent.sina.com.cn/search_key.php?keyword=%D0%A4%D5%E9%BD%DC" target="_blank">影讯</a>
+
+<a rel="http://data.ent.sina.com.cn/show/search.php?keyword=%D0%A4%D5%E9%BD%DC" href="http://data.ent.sina.com.cn/show/search.php?keyword=%D0%A4%D5%E9%BD%DC" target="_blank">演出</a>
+<span class="line-dot"></span>
+<a href="http://bbs.sina.com.cn/" target="_blank">论坛</a>
+<span class="line-dot"></span>
+<a href="http://search.sina.com.cn/?c=more">更多&gt;&gt;</a>
+		 </div>
+	</div>
+	
+	<div class="list-more" id="videocmore" style="left:775px;top:26px;display:none;"><!-- left:485px -->
+		 <div class="more-arr"></div>
+		 <div class="more-link">				
+			<a href="http://video.sina.com.cn/" target="_blank">视频首页</a>
+			<a href="http://video.sina.com.cn/movie/"  target="_blank">大片</a>
+			<a href="http://video.sina.com.cn/news/" target="_blank">视频新闻</a>
+			<a href="http://v.sina.com.cn/" target="_blank">播客</a>
+			<a href="http://video.sina.com.cn/live/" target="_blank">嘉宾聊天</a>
+			<a href="http://video.sina.com.cn/tv" target="_blank">电视台</a>
+		 </div>
+	</div>
+	
+</div>
+<script type="text/javascript">
+	//<![CDATA[
+	//(function(){
+		var menuTop = new DownMenu("topamore","topcmore");
+		$("#topcmore a").click(function(event){menuTop.hide();});
+		menuTop.init();
+		
+		var menuTop2 = new DownMenu("videoamore","videocmore");
+		$("#videocmore a").click(function(event){menuTop2.hide();});
+		menuTop2.init();
+	//})();
+	//]]>
+</script><!-- 头部 edn-->
+<div class="co_wrap950">
+	<!-- 搜索 start-->
+	<div class="t_box_search">
+		<div class="logo"><a href="http://video.sina.com.cn/" target="_blank"><img src="http://sjs0.sinajs.cn/video/images/common/v_logo_154x62.jpg" width="154" height="62" /></a></div>
+		<div class="t_search">
+		<form id="search_form" action="index.php" method="get">
+        		<!-- input name="r" type="hidden" value="739070281" -->
+				<input id="search_input" name="k" type="text" value="肖臻杰" rel="search_ac" formid="search_form" searchtype="all" autocomplete="off" maxlength="200"/>
+				<button type="submit">搜索</button>
+		</form>
+				</div>
+	</div>
+	<!-- 搜索 edn-->
+	<div class="cols_A">
+	<!-- 推荐结果-专集 start-->
+		<div class="box_blue_3">
+			<div class="box_hd">
+				<h3>找到 “<strong class="highlight">肖臻杰</strong>” 相关结果 7 个</h3>
+			</div>
+                        					</div>
+		<!-- 推荐结果-专集 edn-->
+		<div class="blank_20"></div>
+		<!-- 视频结果列表 start-->
+        		<div class="video_box">
+			<form method="get" action="" id="condition_search_form" ><input type="hidden" name="k" value="肖臻杰" />
+			<input type="hidden" name="m1" value="a">
+			<div class="hd_nav">
+				<ul class="nav_list">
+												            <li class="cur">
+					                                        <div user_count="video_search_result_all">
+                                                                                                                        					<a href="/search/index.php?k=%E8%82%96%E8%87%BB%E6%9D%B0&m1=a" target="_self">全部</a></div></li>
+												            <li>
+					                                                                                                    <div user_count="video_search_result_tv">
+                                                            					<a href="/search/index.php?k=%E8%82%96%E8%87%BB%E6%9D%B0&m1=d" target="_self">电视节目</a></div></li>
+												            <li>
+					                                                                                                                                            <div user_count="video_search_result_v">
+                    					<a href="/search/index.php?k=%E8%82%96%E8%87%BB%E6%9D%B0&m1=f" target="_self">网友分享</a></div></li>
+									</ul>
+								        <div class="clear"></div>
+		        <div class="hd_sort"><strong>排序：</strong>
+				<input type="hidden" name="m3" value="a1">
+												<a href="#" class="cur" rel="search_as"  formId="condition_search_form" i_name="m3" i_value="a1">相关</a>
+																<a href="#" rel="search_as"  formId="condition_search_form" i_name="m3" i_value="a2">时间</a>
+																<a href="#" rel="search_as"  formId="condition_search_form" i_name="m3" i_value="a3">播放量</a>
+																<a href="#" rel="search_as"  formId="condition_search_form" i_name="m3" i_value="a4">评论</a>
+																<a href="#" rel="search_as"  formId="condition_search_form" i_name="m3" i_value="a5">时长</a>
+											    </div>
+			                <div class="hd_mode"><strong>显示方式：</strong>
+                  <span id='switchH' class="cur">图模式</span>
+          <em id='switchV'>列表模式</em>
+                </div>
+        			</div>
+			</form>
+
+<!-- 横版结果 start -->
+<div id='contentH' class="list_video">
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+		<td class="td1">
+				<!-- 视频图片部分 start -->
+				
+<!-- 网友分享截图 start-->
+<div class="v_Info">
+<div class="videoPic vp120">
+	<img class="pic" src="http://p1.v.iask.com/82/80/77018544_1.jpg" width="120" height="90">
+	<a title="肖臻杰 广告情缘" class="plicon" href="http://video.sina.com.cn/v/b/77018544-2659537761.html" target="_blank"></a> 
+        	<a href="javascript:void(0)" id="add_77018544_1" class="add" title="添加到点播单" onclick="addToPlayList('77018544','2659537761','77018544',1,this);return false;"></a>
+        	<p class="time"></p>
+	<span class="timetxt">00:00:15</span> 
+    </div>
+<div class="name">
+	<a href="http://v.sina.com.cn/c/0/popularity/all_all/1.html" target="_blank">[分享]</a>
+    <a href="http://video.sina.com.cn/v/b/77018544-2659537761.html" target="_blank" title="肖臻杰 广告情缘"><span style="color:#C03">肖臻杰</span> 广告情缘</a>
+</div>
+</div>
+<!--网友分享截图 end-->
+		    		<!-- 视频图片部分 end -->
+			</td>
+		<td class="td2">
+				<!-- 视频图片部分 start -->
+				
+<!-- 网友分享截图 start-->
+<div class="v_Info">
+<div class="videoPic vp120">
+	<img class="pic" src="http://p4.v.iask.com/337/513/77018963_1.jpg" width="120" height="90">
+	<a title="肖臻杰 广告情缘" class="plicon" href="http://video.sina.com.cn/v/b/77018963-2659537761.html" target="_blank"></a> 
+        	<a href="javascript:void(0)" id="add_77018963_1" class="add" title="添加到点播单" onclick="addToPlayList('77018963','2659537761','77018963',1,this);return false;"></a>
+        	<p class="time"></p>
+	<span class="timetxt">00:00:38</span> 
+    </div>
+<div class="name">
+	<a href="http://v.sina.com.cn/c/0/popularity/all_all/1.html" target="_blank">[分享]</a>
+    <a href="http://video.sina.com.cn/v/b/77018963-2659537761.html" target="_blank" title="肖臻杰 广告情缘"><span style="color:#C03">肖臻杰</span> 广告情缘</a>
+</div>
+</div>
+<!--网友分享截图 end-->
+		    		<!-- 视频图片部分 end -->
+			</td>
+		<td class="td3">
+				<!-- 视频图片部分 start -->
+				
+<!-- 网友分享截图 start-->
+<div class="v_Info">
+<div class="videoPic vp120">
+	<img class="pic" src="http://p4.v.iask.com/341/3/76966259_1.jpg" width="120" height="90">
+	<a title="肖臻杰 广告情缘" class="plicon" href="http://video.sina.com.cn/v/b/76966259-2659537761.html" target="_blank"></a> 
+        	<a href="javascript:void(0)" id="add_76966259_1" class="add" title="添加到点播单" onclick="addToPlayList('76966259','2659537761','76966259',1,this);return false;"></a>
+        	<p class="time"></p>
+	<span class="timetxt">00:00:49</span> 
+    </div>
+<div class="name">
+	<a href="http://v.sina.com.cn/c/0/popularity/all_all/1.html" target="_blank">[分享]</a>
+    <a href="http://video.sina.com.cn/v/b/76966259-2659537761.html" target="_blank" title="肖臻杰 广告情缘"><span style="color:#C03">肖臻杰</span> 广告情缘</a>
+</div>
+</div>
+<!--网友分享截图 end-->
+		    		<!-- 视频图片部分 end -->
+			</td>
+		<td class="td4">
+				<!-- 视频图片部分 start -->
+				
+<!-- 网友分享截图 start-->
+<div class="v_Info">
+<div class="videoPic vp120">
+	<img class="pic" src="http://p3.v.iask.com/9/257/2355690_1.jpg" width="120" height="90">
+	<a title="上海十强选手 全资料 肖臻杰 美特斯．邦威 加油好男儿" class="plicon" href="http://video.sina.com.cn/v/b/2355690-1259386654.html" target="_blank"></a> 
+        	<a href="javascript:void(0)" id="add_2355690_1" class="add" title="添加到点播单" onclick="addToPlayList('2355690','1259386654','2355690',1,this);return false;"></a>
+        	<p class="time"></p>
+	<span class="timetxt">00:01:04</span> 
+    </div>
+<div class="name">
+	<a href="http://v.sina.com.cn/c/0/popularity/all_all/1.html" target="_blank">[分享]</a>
+    <a href="http://video.sina.com.cn/v/b/2355690-1259386654.html" target="_blank" title="上海十强选手 全资料 肖臻杰 美特斯．邦威 加油好男儿">上海十强选手 全资料 <span style="color:#C03">肖臻杰</span> 美特...</a>
+</div>
+</div>
+<!--网友分享截图 end-->
+		    		<!-- 视频图片部分 end -->
+			</td>
+	</tr>	 
+<tr>
+		<td class="td1">
+    <div class="v_Info">
+                <!-- 视频部分 start -->
+        <!-- 网友分享文字 start-->
+<ul>
+	<li>播主：<a target="_blank" href="http://you.video.sina.com.cn/m/2659537761" title="陈馨语的博客">陈馨语的博...</a></li>
+	<li>上传：12天前</li>
+	<li vid="77018544" id="1_109911109_1" vid_count="false">播放：0</li>
+	</ul>
+<!-- 网友分享文字 end-->
+        <!-- 视频部分 end -->
+        	</div>
+	</td>
+		<td class="td2">
+    <div class="v_Info">
+                <!-- 视频部分 start -->
+        <!-- 网友分享文字 start-->
+<ul>
+	<li>播主：<a target="_blank" href="http://you.video.sina.com.cn/m/2659537761" title="陈馨语的博客">陈馨语的博...</a></li>
+	<li>上传：12天前</li>
+	<li vid="77018963" id="1_9906869_1" vid_count="false">播放：0</li>
+	</ul>
+<!-- 网友分享文字 end-->
+        <!-- 视频部分 end -->
+        	</div>
+	</td>
+		<td class="td3">
+    <div class="v_Info">
+                <!-- 视频部分 start -->
+        <!-- 网友分享文字 start-->
+<ul>
+	<li>播主：<a target="_blank" href="http://you.video.sina.com.cn/m/2659537761" title="陈馨语的博客">陈馨语的博...</a></li>
+	<li>上传：13天前</li>
+	<li vid="76966259" id="1_109904436_1" vid_count="false">播放：0</li>
+	</ul>
+<!-- 网友分享文字 end-->
+        <!-- 视频部分 end -->
+        	</div>
+	</td>
+		<td class="td4">
+    <div class="v_Info">
+                <!-- 视频部分 start -->
+        <!-- 网友分享文字 start-->
+<ul>
+	<li>播主：<a target="_blank" href="http://you.video.sina.com.cn/m/1259386654" title="帅锅满天下">帅锅满天下</a></li>
+	<li>上传：2007-04-27</li>
+	<li vid="2355690" id="1_5266303_1" vid_count="false">播放：181</li>
+	</ul>
+<!-- 网友分享文字 end-->
+        <!-- 视频部分 end -->
+        	</div>
+	</td>
+	</tr>
+<tr>
+		<td class="td1">
+				<!-- 视频图片部分 start -->
+				
+<!-- 网友分享截图 start-->
+<div class="v_Info">
+<div class="videoPic vp120">
+	<img class="pic" src="http://p4.v.iask.com/598/779/75412383_1.jpg" width="120" height="90">
+	<a title="祁汉，刘硕，肖臻杰" class="plicon" href="http://video.sina.com.cn/v/b/75412383-2131267731.html" target="_blank"></a> 
+        	<a href="javascript:void(0)" id="add_75412383_1" class="add" title="添加到点播单" onclick="addToPlayList('75412383','2131267731','75412383',1,this);return false;"></a>
+        	<p class="time"></p>
+	<span class="timetxt">00:05:39</span> 
+    </div>
+<div class="name">
+	<a href="http://v.sina.com.cn/c/0/popularity/all_all/1.html" target="_blank">[分享]</a>
+    <a href="http://video.sina.com.cn/v/b/75412383-2131267731.html" target="_blank" title="祁汉，刘硕，肖臻杰">祁汉，刘硕，<span style="color:#C03">肖臻杰</span></a>
+</div>
+</div>
+<!--网友分享截图 end-->
+		    		<!-- 视频图片部分 end -->
+			</td>
+		<td class="td2">
+				<!-- 视频图片部分 start -->
+				
+<!-- 电视节目截图 start-->
+<div class="v_Info">
+<div class="videoPic vp120">
+	<img class="pic" src="http://p4.v.iask.com/261/597/69388947_1.jpg" width="120" height="90">
+    <a title="百里挑一 20120106 嗲女遭昔日男同学爆料" class="plicon" href="http://tv.video.sina.com.cn/play/265095.html" target="_blank"></a> 
+    	<p class="time"></p>
+	<span class="timetxt">01:24:55</span> 
+    </div>
+<div class="name">
+	<a href="http://tv.video.sina.com.cn/program/list/index.html" target="_blank">[节目]</a><a href="http://tv.video.sina.com.cn/play/265095.html" target="_blank" title="百里挑一 20120106 嗲女遭昔日男同学爆料">百里挑一 20120106 嗲女遭昔日男...</a>
+</div>
+</div>
+<!--电视节目分享截图 end-->
+		    		<!-- 视频图片部分 end -->
+			</td>
+		<td class="td3">
+				<!-- 视频图片部分 start -->
+		<!-- 电影电视剧纪录片动画片原创综艺截图 start-->
+<div class="v_Info">
+<div class="videoPic vp120">
+	<img class="pic" src="http://p3.v.iask.com/0/80/69804393_2.jpg" width="120" height="90">
+	<a title="谁能百里挑一 2012-01-14 男生真诚表白甜蜜牵手" class="plicon" href="http://video.sina.com.cn/m/snblty_61642765.html" target="_blank"></a>
+        				<p class="time"></p>
+			<span class="timetxt">01:18:33</span>
+    			<p class="hd"></p>
+		<span class="hdtxt">HD</span>
+		<p class="whole"></p>
+		<span class="wholetxt">全片</span>
+    </div>
+<div class="name">
+			                	<a href="http://video.sina.com.cn/movie/category/arts/index.html" target="_blank">[综艺]</a>
+    	<a href="http://video.sina.com.cn/m/snblty_61642765.html" target="_blank" title="谁能百里挑一 2012-01-14 男生真诚表白甜蜜牵手">谁能百里挑一 2012-01-14 男生真...</a>
+</div>
+</div>
+<!-- 电影电视剧纪录片动画片原创综艺截图 end-->	
+		
+		    		<!-- 视频图片部分 end -->
+			</td>
+	</tr>	 
+<tr>
+		<td class="td1">
+    <div class="v_Info">
+                <!-- 视频部分 start -->
+        <!-- 网友分享文字 start-->
+<ul>
+	<li>播主：<a target="_blank" href="http://you.video.sina.com.cn/m/2131267731" title="强势地情绪在澎湃">强势地情绪...</a></li>
+	<li>上传：2012-04-21</li>
+	<li vid="75412383" id="1_9701522_1" vid_count="false">播放：0</li>
+	</ul>
+<!-- 网友分享文字 end-->
+        <!-- 视频部分 end -->
+        	</div>
+	</td>
+		<td class="td2">
+    <div class="v_Info">
+                <!-- 视频部分 start -->
+        <!-- 电视节目文字 start-->
+<ul>
+	<li>栏目：<a href="http://tv.video.sina.com.cn/program/9/detail/blty.html" target="_blank" title="百里挑一">百里挑一</a></li>
+	<li>上传：2012-01-07</li>
+	<li>&nbsp;</li>
+</ul>
+<!-- 电视节目文字 end-->
+        <!-- 视频部分 end -->
+        	</div>
+	</td>
+		<td class="td3">
+    <div class="v_Info">
+                <!-- 视频部分 start -->
+        <!-- 综艺文字 start-->
+<ul>
+	    <li>主持：<a href="index.php?k=%E7%A8%8B%E9%9B%B7" target="_blank" title="程雷">程雷</a></li>
+    	<li>嘉宾：<a href="index.php?k=%E6%9C%AA%E7%9F%A5" target="_blank" title="未知">未知</a></li>
+	<li>&nbsp;</li>
+</ul>
+<!-- 综艺文字 end-->
+        <!-- 视频部分 end -->
+        	</div>
+	</td>
+	</tr>
+<tr>
+	</tr>	 
+<tr>
+	</tr>
+<tr>
+	</tr>	 
+<tr>
+	</tr>
+<tr>
+	</tr>	 
+<tr>
+	</tr>
+		          
+</table>
+</div>
+<!-- 横版结果  end -->
+
+<!-- 竖版结果  start -->
+    <div id='contentV' class="list_video" style="display:none;">
+            <ul class="v_Info_ul">
+				<!-- 视频部分 start -->
+				<!-- 网友分享 start-->
+<li class="con">
+	<div class="videoPic vp120"><img class="pic" src="http://p1.v.iask.com/82/80/77018544_1.jpg" width="120" height="90"> <a title="肖臻杰 广告情缘" class="plicon" href="http://video.sina.com.cn/v/b/77018544-2659537761.html" target="_blank"></a>
+				<a href="javascript:void(0)" id="add2_77018544_1" class="add" title="添加到点播单" onclick="addToPlayList('77018544','2659537761','77018544',1,this);return false;"></a>
+		        		<p class="time"></p>
+		<span class="timetxt">00:00:15</span>
+        	</div>
+	<div class="text">
+	<ul>
+		<li class="name">
+        	<a href="http://v.sina.com.cn/c/0/popularity/all_all/1.html" target="_blank">[分享]</a>
+	        <a href="http://video.sina.com.cn/v/b/77018544-2659537761.html" target="_blank"><span style="color:#C03">肖臻杰</span> 广告情缘</a>
+        </li>
+        		<li class="drama"><strong>描述：</strong><span style="color:#C03">肖臻杰</span> 广告情缘</li>
+        		<li>播主：<a href="http://you.video.sina.com.cn/m/2659537761" target="_blank" title="陈馨语的博客">陈馨语的博客</a></li>
+		<li>标签：<a href="index.php?k=%E8%82%96%E8%87%BB%E6%9D%B0" target="_blank" title="肖臻杰">肖臻杰</a> <a href="index.php?k=%E5%B9%BF%E5%91%8A%E6%83%85%E7%BC%98" target="_blank" title="广告情缘">广告情缘</a></li>
+		<li><span vid="77018544" id="2_109911109_" vid_count="false">播放：0</span> | 评论：0 | 上传：12天前</li>
+	</ul>
+	<div class="btn"><span class="btn_play"><a target="_blank" href="http://video.sina.com.cn/v/b/77018544-2659537761.html">播放</a></span></div>
+</div>
+</li>
+<!-- 网友分享 end-->
+        <!-- 视频部分 end -->
+                		<!-- 视频部分 start -->
+				<!-- 网友分享 start-->
+<li class="con">
+	<div class="videoPic vp120"><img class="pic" src="http://p4.v.iask.com/337/513/77018963_1.jpg" width="120" height="90"> <a title="肖臻杰 广告情缘" class="plicon" href="http://video.sina.com.cn/v/b/77018963-2659537761.html" target="_blank"></a>
+				<a href="javascript:void(0)" id="add2_77018963_1" class="add" title="添加到点播单" onclick="addToPlayList('77018963','2659537761','77018963',1,this);return false;"></a>
+		        		<p class="time"></p>
+		<span class="timetxt">00:00:38</span>
+        	</div>
+	<div class="text">
+	<ul>
+		<li class="name">
+        	<a href="http://v.sina.com.cn/c/0/popularity/all_all/1.html" target="_blank">[分享]</a>
+	        <a href="http://video.sina.com.cn/v/b/77018963-2659537761.html" target="_blank"><span style="color:#C03">肖臻杰</span> 广告情缘</a>
+        </li>
+        		<li class="drama"><strong>描述：</strong><span style="color:#C03">肖臻杰</span> 广告情缘</li>
+        		<li>播主：<a href="http://you.video.sina.com.cn/m/2659537761" target="_blank" title="陈馨语的博客">陈馨语的博客</a></li>
+		<li>标签：<a href="index.php?k=%E8%82%96%E8%87%BB%E6%9D%B0" target="_blank" title="肖臻杰">肖臻杰</a> <a href="index.php?k=%E5%B9%BF%E5%91%8A%E6%83%85%E7%BC%98" target="_blank" title="广告情缘">广告情缘</a></li>
+		<li><span vid="77018963" id="2_9906869_" vid_count="false">播放：0</span> | 评论：0 | 上传：12天前</li>
+	</ul>
+	<div class="btn"><span class="btn_play"><a target="_blank" href="http://video.sina.com.cn/v/b/77018963-2659537761.html">播放</a></span></div>
+</div>
+</li>
+<!-- 网友分享 end-->
+        <!-- 视频部分 end -->
+                		<!-- 视频部分 start -->
+				<!-- 网友分享 start-->
+<li class="con">
+	<div class="videoPic vp120"><img class="pic" src="http://p4.v.iask.com/341/3/76966259_1.jpg" width="120" height="90"> <a title="肖臻杰 广告情缘" class="plicon" href="http://video.sina.com.cn/v/b/76966259-2659537761.html" target="_blank"></a>
+				<a href="javascript:void(0)" id="add2_76966259_1" class="add" title="添加到点播单" onclick="addToPlayList('76966259','2659537761','76966259',1,this);return false;"></a>
+		        		<p class="time"></p>
+		<span class="timetxt">00:00:49</span>
+        	</div>
+	<div class="text">
+	<ul>
+		<li class="name">
+        	<a href="http://v.sina.com.cn/c/0/popularity/all_all/1.html" target="_blank">[分享]</a>
+	        <a href="http://video.sina.com.cn/v/b/76966259-2659537761.html" target="_blank"><span style="color:#C03">肖臻杰</span> 广告情缘</a>
+        </li>
+        		<li class="drama"><strong>描述：</strong><span style="color:#C03">肖臻杰</span> 广告情缘</li>
+        		<li>播主：<a href="http://you.video.sina.com.cn/m/2659537761" target="_blank" title="陈馨语的博客">陈馨语的博客</a></li>
+		<li>标签：<a href="index.php?k=%E8%82%96%E8%87%BB%E6%9D%B0" target="_blank" title="肖臻杰">肖臻杰</a> <a href="index.php?k=%E5%B9%BF%E5%91%8A%E6%83%85%E7%BC%98" target="_blank" title="广告情缘">广告情缘</a></li>
+		<li><span vid="76966259" id="2_109904436_" vid_count="false">播放：0</span> | 评论：0 | 上传：13天前</li>
+	</ul>
+	<div class="btn"><span class="btn_play"><a target="_blank" href="http://video.sina.com.cn/v/b/76966259-2659537761.html">播放</a></span></div>
+</div>
+</li>
+<!-- 网友分享 end-->
+        <!-- 视频部分 end -->
+                		<!-- 视频部分 start -->
+				<!-- 网友分享 start-->
+<li class="con">
+	<div class="videoPic vp120"><img class="pic" src="http://p3.v.iask.com/9/257/2355690_1.jpg" width="120" height="90"> <a title="上海十强选手 全资料 肖臻杰 美特斯．邦威 加油好男儿" class="plicon" href="http://video.sina.com.cn/v/b/2355690-1259386654.html" target="_blank"></a>
+				<a href="javascript:void(0)" id="add2_2355690_1" class="add" title="添加到点播单" onclick="addToPlayList('2355690','1259386654','2355690',1,this);return false;"></a>
+		        		<p class="time"></p>
+		<span class="timetxt">00:01:04</span>
+        	</div>
+	<div class="text">
+	<ul>
+		<li class="name">
+        	<a href="http://v.sina.com.cn/c/0/popularity/all_all/1.html" target="_blank">[分享]</a>
+	        <a href="http://video.sina.com.cn/v/b/2355690-1259386654.html" target="_blank">上海十强选手 全资料 <span style="color:#C03">肖臻杰</span> 美特斯．邦威 加油好男儿</a>
+        </li>
+        		<li class="drama"><strong>描述：</strong>上海十强选手 全资料 <span style="color:#C03">肖臻杰</span> 美特斯．邦威 加油好男儿</li>
+        		<li>播主：<a href="http://you.video.sina.com.cn/m/1259386654" target="_blank" title="帅锅满天下">帅锅满天下</a></li>
+		<li>标签：<a href="index.php?k=%E4%B8%8A%E6%B5%B7%E5%8D%81%E5%BC%BA%E9%80%89%E6%89%8B" target="_blank" title="上海十强选手">上海十强选手</a> <a href="index.php?k=%E5%85%A8%E8%B5%84%E6%96%99" target="_blank" title="全资料">全资料</a> <a href="index.php?k=%E8%82%96%E8%87%BB%E6%9D%B0" target="_blank" title="肖臻杰">肖臻杰</a> <a href="index.php?k=%E7%BE%8E%E7%89%B9%E6%96%AF%EF%BC%8E%E9%82%A6%E5%A8%81" target="_blank" title="美特斯．邦威">美特斯．邦威</a> <a href="index.php?k=%E5%8A%A0%E6%B2%B9%E5%A5%BD%E7%94%B7%E5%84%BF" target="_blank" title="加油好男儿">加油好男儿</a></li>
+		<li><span vid="2355690" id="2_5266303_" vid_count="false">播放：181</span> | 评论：0 | 上传：2007-04-27</li>
+	</ul>
+	<div class="btn"><span class="btn_play"><a target="_blank" href="http://video.sina.com.cn/v/b/2355690-1259386654.html">播放</a></span></div>
+</div>
+</li>
+<!-- 网友分享 end-->
+        <!-- 视频部分 end -->
+                		<!-- 视频部分 start -->
+				<!-- 网友分享 start-->
+<li class="con">
+	<div class="videoPic vp120"><img class="pic" src="http://p4.v.iask.com/598/779/75412383_1.jpg" width="120" height="90"> <a title="祁汉，刘硕，肖臻杰" class="plicon" href="http://video.sina.com.cn/v/b/75412383-2131267731.html" target="_blank"></a>
+				<a href="javascript:void(0)" id="add2_75412383_1" class="add" title="添加到点播单" onclick="addToPlayList('75412383','2131267731','75412383',1,this);return false;"></a>
+		        		<p class="time"></p>
+		<span class="timetxt">00:05:39</span>
+        	</div>
+	<div class="text">
+	<ul>
+		<li class="name">
+        	<a href="http://v.sina.com.cn/c/0/popularity/all_all/1.html" target="_blank">[分享]</a>
+	        <a href="http://video.sina.com.cn/v/b/75412383-2131267731.html" target="_blank">祁汉，刘硕，<span style="color:#C03">肖臻杰</span></a>
+        </li>
+        		<li class="drama"><strong>描述：</strong>帅。。。</li>
+        		<li>播主：<a href="http://you.video.sina.com.cn/m/2131267731" target="_blank" title="强势地情绪在澎湃">强势地情绪在澎湃</a></li>
+		<li>标签：<a href="index.php?k=%E5%B8%85%E5%93%A5" target="_blank" title="帅哥">帅哥</a></li>
+		<li><span vid="75412383" id="2_9701522_" vid_count="false">播放：0</span> | 评论：0 | 上传：2012-04-21</li>
+	</ul>
+	<div class="btn"><span class="btn_play"><a target="_blank" href="http://video.sina.com.cn/v/b/75412383-2131267731.html">播放</a></span></div>
+</div>
+</li>
+<!-- 网友分享 end-->
+        <!-- 视频部分 end -->
+                		<!-- 视频部分 start -->
+				<!-- 电视节目 start-->
+<li class="con">
+	<div class="videoPic vp120"><img class="pic" src="http://p4.v.iask.com/261/597/69388947_1.jpg" width="120" height="90"> <a title="百里挑一 20120106 嗲女遭昔日男同学爆料" class="plicon" href="http://tv.video.sina.com.cn/play/265095.html" target="_blank"></a>
+    			<p class="time"></p>
+		<span class="timetxt">01:24:55</span>
+        	</div>
+	<div class="text">
+		<ul>
+			<li class="name">
+            	<a href="http://tv.video.sina.com.cn/program/list/index.html" target="_blank">[节目]</a>
+                <a href="http://tv.video.sina.com.cn/play/265095.html" target="_blank">百里挑一 20120106 嗲女遭昔日男同学爆料</a>
+            </li>
+			<li class="drama"><strong>描述：</strong>叶梓萱小学同学来相认，独家爆料叶梓萱儿时照片。帅气银行理财顾问<span style="color:#C03">肖臻杰</span>让赵洁方寸大乱？痴情男嘉宾把心仪女生的名字刻在香水上，让所有女人羡慕不已。26岁就年...</li>
+			<li>栏目：<a href="http://tv.video.sina.com.cn/program/9/detail/blty.html" target="_blank">百里挑一</a></li>
+			<li>评论：0 | 上传：2012-01-07</li>
+		</ul>
+		<div class="btn"><span class="btn_play"><a target="_blank" href="http://tv.video.sina.com.cn/play/265095.html">播放</a></span></div>
+	</div>
+</li>
+<!-- 电视节目 end-->
+        <!-- 视频部分 end -->
+                		<!-- 视频部分 start -->
+				<!-- 电影、电视剧、纪录片、动画片、原创、综艺 start-->
+<li class="con">
+<div class="videoPic vp120">
+	<img class="pic" src="http://p3.v.iask.com/0/80/69804393_2.jpg" width="120" height="90"> <a title="谁能百里挑一 2012-01-14 男生真诚表白甜蜜牵手" class="plicon" href="http://video.sina.com.cn/m/snblty_61642765.html" target="_blank"></a>
+        				<p class="time"></p>
+			<span class="timetxt">01:18:33</span>
+    			<p class="hd"></p>
+		<span class="hdtxt">HD</span>
+		<p class="whole"></p>
+		<span class="wholetxt">全片</span>
+        </div>
+	<div class="text">
+	<ul>
+	<li class="name">
+    	                                                    <a href="http://video.sina.com.cn/movie/category/arts/index.html" target="_blank">[综艺]</a>
+                <a href="http://video.sina.com.cn/m/snblty_61642765.html" target="_blank">谁能百里挑一 2012-01-14 男生真诚表白甜蜜牵手</a>
+    </li>
+        <li class="drama"><strong>描述：</strong>修晓永、李恒健、<span style="color:#C03">肖臻杰</span>在李沁蕾没有揭面的时候都为她留牌也向她表白过，但是男嘉宾都希望她能揭面，最后李沁蕾说我不揭面，谁留下我就跟谁走？结果他们三个都...</li>
+        	                                   <li>主持：<a href="index.php?k=%E7%A8%8B%E9%9B%B7" target="_blank" title="程雷">程雷</a>&nbsp;&nbsp;&nbsp;&nbsp;嘉宾：<a href="index.php?k=%E6%9C%AA%E7%9F%A5" target="_blank" title="未知">未知</a>
+            </li>
+    <li>评论：0 | 上传：2012-01-16</li>
+    </ul>
+	<div class="btn">
+    	<span class="btn_play"><a target="_blank" href="http://video.sina.com.cn/m/snblty_61642765.html">播放</a></span>
+    </div>
+</div>
+</li>
+<!-- 电影、电视剧、纪录片、动画片、原创、综艺 end-->
+        <!-- 视频部分 end -->
+                        </ul>
+</div>
+<!-- 竖版结果  end-->
+		<!--公用分页-->
+			<div class="co_page">
+				<ul class="co_pages">
+					<li class='co_pgon'>1</li>
+				</ul>
+			</div>
+		<!--公用分页 /-->
+		</div>
+        		<!-- 视频结果列表 edn-->
+	</div>
+	<div class="cols_B" id="cols_B">
+		<!-- 广告 start-->
+		<div class="ads_1" id="cols_B_p">
+        <div id="adFlashPlayer" style="font-size:0; line-height:0;" ></div>
+        <div class="blank_10" id="blank_10_"></div>
+	    <script language="javascript" src="http://js.sinajs.cn/play/playflash.js?maxage=6000000"></script>
+        <script type="text/javascript">
+        var FlashPlayer = new SWFObject("http://p.you.video.sina.com.cn/swf/searchPlayer20110617_V3_1.swf?n=10", "sotester", "1", "1", "9.0.115", "#ffffff");
+      	FlashPlayer.addParam("allowScriptAccess", "always");
+      	FlashPlayer.addParam("allowFullScreen", "true");
+     	FlashPlayer.addParam("quality", "high");
+      	FlashPlayer.addParam("wmode", "transparent"); 
+		FlashPlayer.addVariable("adkeyWord", "肖臻杰");
+      	FlashPlayer.addVariable("sound", "0");
+		FlashPlayer.addVariable("adPlayerWidth", "300");
+		FlashPlayer.addVariable("adPlayerHeight", "250");
+      	FlashPlayer.write("adFlashPlayer");
+		function resetAdFlashPlayerSize(flag){
+				if(flag===1){
+					document.getElementById('sotester').style.width="300px";
+					document.getElementById('sotester').style.height="250px";
+					}else{
+						document.getElementById('adFlashPlayer').innerHTML = '';
+						document.getElementById('cols_B_p').removeChild(document.getElementById('blank_10_'))
+						}
+									
+			}
+     	</script>
+        </div>
+		<!-- 广告 edn-->
+		<!-- 搜索热词榜 start-->
+		<!-- 搜索热词榜 edn-->
+	</div>
+	<div class="blank_10"></div>
+	<div class="cols_A" id="cols_A">
+		<!-- 相关搜索 start-->
+				<!-- 相关搜索 edn-->
+		<div class="blank_10"></div>
+		<!-- 热词推荐 start-->
+		<!-- 热词推荐 edn-->
+	</div>
+	<div class="blank_10"></div>
+	<!-- 搜索 start-->
+	<div class="b_box_search">
+		<div class="t_search">
+			<form id="search_form_bottom" action="index.php" method="get">
+				<input id="search_input_bottom" name="k" type="text" value="肖臻杰" maxlength="200" formid="search_form_bottom" autocomplete="off"/>
+				<button type="submit">搜索</button>
+			</form>
+		</div>
+	</div>
+	<!-- 搜索 edn-->
+</div>
+<!-- 尾部 begin-->
+<div class="foot">
+	<p><a href="http://comment4.news.sina.com.cn/comment/skin/feedback.html" target="_blank">网友意见反馈留言板</a></p>
+	<div class="boxborder"></div>
+	<p class="link"><a href="http://corp.sina.com.cn/chn/" target="_blank">新浪简介</a><span>|</span><a href="http://corp.sina.com.cn/eng/" target="_blank">About Sina</a><span>|</span><a href="http://emarketing.sina.com.cn/" target="_blank">广告服务</a><span>|</span><a href="http://www.sina.com.cn/contactus.html" target="_blank">联系我们</a><span>|</span><a href="http://corp.sina.com.cn/chn/sina_job.html" target="_blank">招聘信息</a><span>|</span><a href="http://www.sina.com.cn/intro/lawfirm.shtml" target="_blank">网站律师</a><span>|</span><a href="http://english.sina.com/" target="_blank">SINA English</a><span>|</span><a href="http://members.sina.com.cn/apply/" target="_blank">会员注册</a><span>|</span><a href="http://help.sina.com.cn/" target="_blank">产品答疑</a></p>
+	<p>Copyright © 1996-2011 SINA Corporation, All Rights Reserved</p>
+	<p>新浪公司 版权所有</p>
+</div>
+<!-- 尾部 end-->
+<script type="text/javascript" src=" http://sjs0.sinajs.cn/video/js/js_seo/topLoadingJS_search.js?version=1.0.0.3"></script>
+<script type="text/javascript">
+	window.onload = function(){
+		$TOPLBW.Login.userlogin.flag = false
+		try{$TOPLBW.Topic.init("topTrayBox");}catch(e){}
+		
+		}
+
+</script>
+<script type="text/javascript" src="http://sjs0.sinajs.cn/video/search/js/search/boot.js"></script>
+<script type="text/javascript">__load_js();__render_page();</script>
+<script type="text/javascript" src="http://www.sinaimg.cn/unipro/pub/suda_m_v629.js"></script>
+<script type="text/javascript">suds_init(1551,10.00,975,2);</script>
+<!-- SUDA_AREA_CODE_START --> 
+<script type="text/javascript" src="http://www.sinaimg.cn/unipro/pub/suda_s_v851c.js"></script>
+<script type="text/javascript" src="http://image2.sina.com.cn/unipro/pub/tblog_clickarea_v101221.js"></script>
+<script type="text/javascript">_trace_suds_clickAct_init(10, 60000);</script>
+<!-- SUDA_AREA_CODE_END -->
+</body>
+</html>
